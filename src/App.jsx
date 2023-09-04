@@ -7,7 +7,8 @@ function App() {
   return <div className="">
     <Navbar />
     <Bot />
-  </div>;
+  <div className="pt-[94rem] text-center">hello</div>  
+   </div>;
 }
 
 export default App;

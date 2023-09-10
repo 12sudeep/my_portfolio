@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import LOGO from "../assets/logo.webp"
+import LOGO from "../assets/Union.svg"
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
         { name: "ABOUT", link: "#about" },
         { name: "SKILLS", link: "#skills" },
         { name: "PROJECTS", link: "#projects" },
-        { name: "Contact", link: "#contact" },
+        { name: "CONTACT", link: "#contact" },
     ];
 
     useEffect(() => {
@@ -26,32 +27,36 @@ const Navbar = () => {
             window.removeEventListener("scroll", () => { });
         };
     }, []);
+
+
     return (
-        <nav className={`fixed w-full left-0 top-0 z- [999] ${sticky ? "textgray-900" : "text-white"}`}>
-            <div className="flex justify-between items-center">
-                <div className="w-20 md:w-[100px] md:mx-8 rotate-[28.56deg] cursor-pointer">
-                    <img onClick="#" src={LOGO} alt="logo" />
+        <nav className="fixed w-full left-0 top-0 z-[999] bg-[#1A1919] drop-shadow-xl">
+            <div className="flex justify-between items-center lg:px-36 px-8">
+                <div className="w-11 cursor-pointer ">
+                    <Link to="#home">
+                    <img src={LOGO} alt="logo" />
+                    </Link>
                 </div>
                 <div onClick={() => setOpen(!open)}
-                    className={`z-[999] ${open ? "text-black" : "text:black-900"} text-5xl md:hidden m-5`}>
+                    className={`z-[999] ${open ? "text-black hover:text-cyan-500" : "text:black-900"} text-5xl md:hidden my-3 `}>
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-                <div className={`md:hidden absolute w-2/3 h-screen px-7 py-2 font-medium bg-white top-0 right-0 duration-400 ${open ? "right-0" : "right-[-100%]"}`}>
+                <div className={`md:hidden absolute w-2/3 h-screen px-8 py-2 font-medium bg-white top-0 right-0 transition-all duration-700  ${open ? "right-0" : "right-[-100%]"}`}>
                     <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
                         {
                             menuLinks?.map((menu, i) => (
-                                <li key={i} className="px-7 text-[brown] hover:text-cyan-500 my-2">
+                                <li key={i} className="px-7 text-black hover:text-cyan-500 my-2">
                                     <a href={menu?.link}>{menu?.name}</a>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
-                <div className="md:block hidden px-7 py-2 font-medium bg-white rounded-bl-full">
-                    <ul className="flex items-center gap-1 py-2 text-lg">
+                <div className="md:block hidden lg:px-7 py-2 font-medium">
+                    <ul className="flex items-center gap-1 py-2 lg:text-lg">
                         {
                             menuLinks?.map((menu, i) => (
-                                <li key={i} className="px-7 text-[brown] hover:text-cyan-500 my-2">
+                                <li key={i} className="lg:px-7 px-5 text-white hover:text-cyan-500 my-2">
                                     <a href={menu?.link}>{menu?.name}</a>
                                 </li>
                             ))

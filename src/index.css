@@ -10,3 +10,7 @@ html {
 body {
   @apply box-border bg-black text-white;
 }
+
+.btn-primary {
+  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+}

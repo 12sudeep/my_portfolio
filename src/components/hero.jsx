@@ -1,24 +1,37 @@
-import hero from "../assets/image_1.png"
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import animate from "../assets/hello4.json"
+import React, { useRef } from "react";
+import { useTypewriter } from "react-simple-typewriter";
+
 
 const Hero = () => {
+    const phoneRef = useRef(null); // eslint-disable-next-line
+    const [text] = useTypewriter({
+        words: ["Data Science Enthusiastic.", "Bachelor Student.", "Friendly Guy."],
+        loop: true,
+        typeSpeed: 80,
+        deleteSpeed: 80,
+        delaySpeed: 2000,
+    });
+
     return (
-        <section id="home" className="min-h-screen flex flex-col py-20 items-center">
-            <div className="py-3 pt-28 text-5xl font-bold">
-                <h1>SUDEEP FULLEL</h1>
+        <section id="home" className="min-h-screen flex lg:flex-row md:pt-2 pt-20 flex-col sm:px-28 px-8 items-center">
+            <div className="flex-1">
+                <Lottie
+                    lottieRef={phoneRef}
+                    loop={false}
+                    animationData={animate} />
             </div>
-            <div className="py-3 text-3xl">
-                <h3>Data Science Enthusiastic</h3>
-            </div>
-            <div className="px-[20rem] py-4">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using </p>
-            </div>
-            <div className="flex flex-row gap-[4rem] py-4 text-5xl">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            <ion-icon name="logo-github"></ion-icon>
-            <ion-icon name="logo-instagram"></ion-icon>
-            </div>
-            <div>
-                <img src={hero} alt="hero" className="w-[25rem]"></img>
+            <div className="flex-1">
+                <div className="py-4 py-1 md:text-6xl text-3xl text-center">
+                    <h1>I am Sudeep Fullel</h1>
+                </div>
+                <div className="py-5 sm:text-3xl text-xl text-center">
+                    A <span>{text}</span>
+                </div>
+                <div className="flex py-4 sm:text-3xl text-2xl text-[cyan] justify-center">
+                    <h3 className="lg:absolute bottom-32">Let's connect....</h3>
+                </div>
             </div>
         </section>
     )

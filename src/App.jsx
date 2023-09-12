@@ -3,6 +3,7 @@ import About from "./components/about";
 import Bot from "./components/bot";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import Resume from "./components/resume";
 
 
 
@@ -13,6 +14,7 @@ function App() {
       <Bot />
       <Hero />
       <About />
+      <Resume />
     </Router>
   </div>;
 }

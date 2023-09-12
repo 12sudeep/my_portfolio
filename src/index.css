@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   @apply font-Poppins scroll-smooth text-white;
 }
 
 body {
-  @apply box-border bg-black text-white;
+  @apply box-border bg-[#262626] text-white font-Poppins;
 }
 
 .btn-primary {

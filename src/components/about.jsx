@@ -1,7 +1,8 @@
 import CV from "../assets/SudeepFullel_cv.pdf"
-import Don from "../assets/Mask group.svg"
+import Don from "../assets/image_1.png"
 
 const About = () => {
+
     const info = [
         { text: "Degree", count: "Data Science(Ongoing)" },
         { text: "Completed Projects", count: "5+" },

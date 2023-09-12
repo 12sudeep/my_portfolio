@@ -30,8 +30,8 @@ const Navbar = () => {
 
 
     return (
-        <nav className="fixed w-full left-0 top-0 z-[999] bg-[#1A1919] drop-shadow-xl">
-            <div className="flex justify-between items-center lg:px-36 px-8">
+        <nav className="fixed w-full left-0 top-0 z-[999] bg-[#1E1E1E] drop-shadow-xl">
+            <div className="flex h-[90px] justify-between items-center lg:px-36 px-8">
                 <div className="w-11 cursor-pointer ">
                     <Link to="#home">
                     <img src={LOGO} alt="logo" />
@@ -56,7 +56,7 @@ const Navbar = () => {
                     <ul className="flex items-center gap-1 py-2 lg:text-lg">
                         {
                             menuLinks?.map((menu, i) => (
-                                <li key={i} className="lg:px-7 px-5 text-white hover:text-cyan-500 my-2">
+                                <li key={i} className="lg:px-7 px-5 text-base text-white hover:underline underline-offset-8 decoration-[cyan]">
                                     <a href={menu?.link}>{menu?.name}</a>
                                 </li>
                             ))

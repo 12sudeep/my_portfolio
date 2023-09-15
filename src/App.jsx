@@ -8,7 +8,7 @@ import Resume from "./components/resume";
 
 
 function App() {
-  return <div className="">
+  return <div className="container mx-auto">
     <Router>
       <Navbar />
       <Bot />

@@ -15,7 +15,7 @@ const Hero = () => {
     });
 
     return (
-        <section id="home" className="min-h-screen flex lg:flex-row md:pt-2 pt-20 flex-col sm:px-28 px-8 items-center">
+        <section id="home" className="container mx-auto min-h-screen flex lg:flex-row md:pt-2 pt-20 flex-col sm:px-28 px-8 items-center">
             <div className="flex-1">
                 <Lottie
                     lottieRef={phoneRef}

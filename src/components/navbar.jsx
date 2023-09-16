@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
-    const [sticky, setSticky] = useState(false);
     const [open, setOpen] = useState(false);
 
     const menuLinks = [
@@ -18,13 +17,10 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             setOpen(false);
-
-            const nav = document.querySelector("nav");
-            window.scrollY > 0 ? setSticky(true) : setSticky(false);
         });
 
         return () => {
-            window.removeEventListener("scroll", () => { });
+            window.removeEventListener("scroll", () => {});
         };
     }, []);
 

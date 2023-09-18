@@ -25,25 +25,37 @@ const Resume = () => {
                         setSkillData(false) &
                         setExperienceData(false) &
                         setAchievementData(false)}
-                        className="resumeLi">Education</li>
+                        className={`${educationData
+                                ? "border-[cyan] rounded-lg"
+                                : "border-transparent"
+                            } resumeLi`}>Education</li>
                     <li onClick={() =>
                         setEducationData(false) &
                         setSkillData(true) &
                         setExperienceData(false) &
                         setAchievementData(false)}
-                        className="resumeLi">Skills</li>
+                        className={`${skillData
+                                ? "border-[cyan] rounded-lg"
+                                : "border-transparent"
+                            } resumeLi`}>Skills</li>
                     <li onClick={() =>
                         setEducationData(false) &
                         setSkillData(false) &
                         setExperienceData(true) &
                         setAchievementData(false)}
-                        className="resumeLi">Experience</li>
+                        className={`${experienceData
+                                ? "border-[cyan] rounded-xl"
+                                : "border-transparent"
+                            } resumeLi`}>Experience</li>
                     <li onClick={() =>
                         setEducationData(false) &
                         setSkillData(false) &
                         setExperienceData(false) &
                         setAchievementData(true)}
-                        className="resumeLi">Achievements</li>
+                        className={`${achievementData
+                                ? "border-[cyan] rounded-lg"
+                                : "border-transparent"
+                            } resumeLi`}>Achievements</li>
                 </ul>
             </div>
 

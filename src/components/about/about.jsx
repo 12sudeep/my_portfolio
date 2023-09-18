@@ -1,6 +1,6 @@
-import CV from "../assets/SudeepFullel_cv.pdf"
-import Don from "../assets/image_1.png"
-import Title from "./layouts/title";
+import CV from "../../assets/SudeepFullel_cv.pdf"
+import Don from "../../assets/image_1.png"
+import Title from "../layouts/title";
 
 const About = () => {
 

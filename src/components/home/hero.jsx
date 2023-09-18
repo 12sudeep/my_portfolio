@@ -1,5 +1,5 @@
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import animate from "../assets/hello4.json"
+import animate from "../../assets/hello4.json"
 import React, { useRef } from "react";
 import { useTypewriter } from "react-simple-typewriter";
 

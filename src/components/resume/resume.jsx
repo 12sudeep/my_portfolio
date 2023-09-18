@@ -1,7 +1,18 @@
+import { useState } from "react";
 import Title from "../layouts/title";
-import ResumeCard from "./resumeCard";
+import Education from "./education";
+import Skills from "./skills";
+import Achievement from "./achievement";
+import Experience from "./experience";
 
 const Resume = () => {
+    const [educationData, setEducationData] = useState(true);
+    const [skillData, setSkillData] = useState(false);
+    const [experienceData, setExperienceData] = useState(false);
+    const [achievementData, setAchievementData] = useState(false);
+
+
+
     return (
         <section id="resume" className="container mx-auto min-h-screen items-center py-10">
             <div className="flex justify-center items-center text-center">
@@ -9,21 +20,38 @@ const Resume = () => {
             </div>
             <div>
                 <ul className="w-full grid grid-cols-4">
-                    <li className="resumeLi">Education</li>
-                    <li className="resumeLi">Skills</li>
-                    <li className="resumeLi">Experience</li>
-                    <li className="resumeLi">Achievements</li>
+                    <li onClick={() =>
+                        setEducationData(true) &
+                        setSkillData(false) &
+                        setExperienceData(false) &
+                        setAchievementData(false)}
+                        className="resumeLi">Education</li>
+                    <li onClick={() =>
+                        setEducationData(false) &
+                        setSkillData(true) &
+                        setExperienceData(false) &
+                        setAchievementData(false)}
+                        className="resumeLi">Skills</li>
+                    <li onClick={() =>
+                        setEducationData(false) &
+                        setSkillData(false) &
+                        setExperienceData(true) &
+                        setAchievementData(false)}
+                        className="resumeLi">Experience</li>
+                    <li onClick={() =>
+                        setEducationData(false) &
+                        setSkillData(false) &
+                        setExperienceData(false) &
+                        setAchievementData(true)}
+                        className="resumeLi">Achievements</li>
                 </ul>
             </div>
-            <div className="py-12 font-titlefont">
-                <p className="text-sm text-cyan-400 tracking-[4px]">2009-2023</p>
-                <h2 className="text-2xl font-bold">Education Quality</h2>
-            </div>
-            <div className="flex flex-col gap-10 mt-14 w-1/2 h-[1000px] border-l-[6px] border-l-black border-opacity-30">
-                <ResumeCard />
-                <ResumeCard />
-                <ResumeCard />
-            </div>
+
+            {educationData && <Education />}
+            {skillData && <Skills />}
+            {achievementData && <Achievement />}
+            {experienceData && <Experience />}
+
         </section>
     );
 }

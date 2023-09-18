@@ -8,8 +8,8 @@ const ResumeCard = ({ title, subTitle, result, des }) => {
                     <span className='w-3 h-3 bg-[#262626] rounded-full inline-flex group-hover:bg-[cyan] duration-300'></span>
                 </span>
             </div>
-            <div className="w-full bg-black bg-opacity-20 hover:bg-opacity-30 duration-300  rounded-lg p-4 lgl:px-10 flex flex-col justify-center gap-6 lgl:gap-10 shadow-shadowOne">
-                <div className="flex flex-col lgl:flex-row justify-between gap-4 lgl:gap-0 lgl:items-center">
+            <div className=" flex flex-col justify-center gap-6 lg:gap-10 w-3/5 bg-black bg-opacity-20 hover:bg-opacity-30 duration-300  rounded-lg lg:px-10 shadow-shadowOne ">
+                <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0 lg:items-center">
                     <div>
                         <h3 className="text-xl md:text-2xl font-semibold group-hover:text-white duration-300">
                             {title}

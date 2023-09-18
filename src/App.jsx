@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import About from "./components/about";
-import Bot from "./components/bot";
-import Hero from "./components/hero";
-import Navbar from "./components/navbar";
-import Resume from "./components/resume";
+import About from "./components/about/about";
+import Bot from "./components/home/bot";
+import Hero from "./components/home/hero";
+import Navbar from "./components/navbar/navbar";
+import Resume from "./components/resume/resume";
 
 
 

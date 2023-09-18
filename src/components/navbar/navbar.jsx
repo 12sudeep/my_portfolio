@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import LOGO from "../assets/Union.svg"
+import LOGO from "../../assets/Union.svg"
 import { Link } from "react-router-dom";
 
 

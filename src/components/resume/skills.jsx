@@ -1,8 +1,15 @@
 import React from 'react'
 import ResumeCard from './resumeCard'
+import { motion } from 'framer-motion'
+
 
 const Skills = () => {
     return (
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      >
         <div className='w-full flex justify-center gap-20'>
             <div>
                 <div className="py-12 font-titlefont">
@@ -30,6 +37,7 @@ const Skills = () => {
                     />
                 </div>
             </div></div>
+            </motion.div>
     )
 }
 

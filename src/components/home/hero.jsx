@@ -15,7 +15,7 @@ const Hero = () => {
     });
 
     return (
-        <section id="home" className="container mx-auto min-h-screen flex lg:flex-row md:pt-2 pt-20 flex-col sm:px-28 px-8 items-center">
+        <section id="home" className="container mx-auto min-h-screen flex lg:flex-row py-20 flex-col sm:px-11 px-8 items-center">
             <div className="flex-1">
                 <Lottie
                     lottieRef={phoneRef}
@@ -23,7 +23,7 @@ const Hero = () => {
                     animationData={animate} />
             </div>
             <div className="flex-1">
-                <div className="py-4 py-1 md:text-6xl text-3xl text-center">
+                <div className="py-5 md:text-6xl text-3xl text-center">
                     <h1>I am Sudeep Fullel</h1>
                 </div>
                 <div className="py-5 sm:text-3xl text-xl text-center">

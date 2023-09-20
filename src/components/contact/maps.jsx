@@ -2,7 +2,7 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 import React, { useEffect, useState } from 'react'
 
-const Map = () => {
+const Map = ({value,value2}) => {
     const mapStyles = {
         height: "20.5rem",
         width: "100%",
@@ -19,8 +19,10 @@ const Map = () => {
         }
     }, []);
 
+    const divClassName = `flex-1 md:${value} ${value2}`;
+
     return (
-        <div className="flex-1">
+        <div className={divClassName}>
             <LoadScript googleMapsApiKey="">
                 <GoogleMap
                     mapContainerStyle={mapStyles}

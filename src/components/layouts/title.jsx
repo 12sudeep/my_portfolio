@@ -1,6 +1,6 @@
 const Title = ({ title, desc }) => {
     return (
-        <div className="flex flex-col gap-4 mb-14">
+        <div className="flex flex-col gap-4 mb-14 justify-center text-center">
             <h3 className="text-3xl md:text-4xl font-semibold uppercase text-white hover:text-cyan-400 tracking-wide">
                 {title}
             </h3>

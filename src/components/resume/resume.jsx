@@ -14,11 +14,11 @@ const Resume = () => {
     return (
         <section
             id="resume"
-            className="container mx-auto min-h-screen items-center sm:py-20 py-10"
+            className="container mx-auto min-h-screen items-center sm:py-20 py-10 "
         >
             <Title title="Resume" desc="more about me" />
             <div>
-                <ul className="w-full grid grid-cols-2 md:grid-cols-4 px-12">
+                <ul className="w-full grid grid-cols-2 md:grid-cols-4 px-14 sm:px-20 lg:px-14">
                     <li
                         onClick={() =>
                             setEducationData(true) &

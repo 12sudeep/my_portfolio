@@ -11,7 +11,7 @@ const Achievement = () => {
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
             className="py-12 font-titleFont flex gap-20"
         >
-            <div className='w-full flex-col justify-center gap-20 px-11'>
+            <div className='w-full flex-col justify-center px-14 sm:px-20 lg:px-14'>
                 <div className="flex flex-col font-titlefont justify-center items-center gap-4">
                     <p className="text-sm text-cyan-400 tracking-[4px]">Awards</p>
                     <h2 className="text-2xl font-bold">Achievements</h2>

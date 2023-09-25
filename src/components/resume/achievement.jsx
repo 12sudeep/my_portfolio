@@ -16,16 +16,17 @@ const Achievement = () => {
                     <p className="text-sm text-cyan-400 tracking-[4px]">Awards</p>
                     <h2 className="text-2xl font-bold">Achievements</h2>
                 </div>
-                <div className='py-10 lgl:mt-14 w-full h-full flex md:flex-row flex-col gap-32 items-center'>
-                    <div className='sm:pb-28 pb-0'><img src={award} alt="" className='w-40 h-40 flex justify-center items-center hover:scale-95' /></div>
-                    <div className="mt-6 lgl:mt-14 w-full flex flex-col gap-10">
+                <div className='py-10 lgl:mt-14 w-full h-full flex md:flex-row flex-col lg:gap-32 gap-10 items-center text-center'>
+                    <div className='md:pb-[500px] lg:pb-28 pb-0'><img src={award} alt="win" className='w-40 h-40 flex justify-center items-center hover:scale-95' /></div>
+                    <div className="mt-0 lgl:mt-14 w-full flex flex-col md:pl-8">
                         <ResumeCard
-                            title="BSc in Computer Science"
-                            subTitle="BCu (2022 - 2026)"
-                            result="3.90/4"
-                            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture.The training provided by universities in order to prepare people to work in various sectors of the economy or areas of cultureThe training provided by universities in order to prepare people to work in various sectors of the economy or areas of cultureThe training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture"
-                        /></div>
-                    </div>
+                            title="Young Scientist Award"
+                            subTitle="Issued by Brainycube Research Organization"
+                            result="Jul 2023"
+                            des="
+                            our team was awarded the prestigious Young Scientist Award at NYSS 2023. This recognition is a testament to the hard work, dedication, and innovative spirit of our entire team.
+                            Our project, the 'Emergency Vehicle Management System,' was recognized for its groundbreaking approach in revolutionizing emergency response management. This achievement would not have been possible without the invaluable support and funding from Sunway College Kathmandu, which played a crucial role in the success of our endeavour."                        /></div>
+                </div>
 
             </div>
         </motion.div>

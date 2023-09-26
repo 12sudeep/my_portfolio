@@ -23,7 +23,7 @@ const Education = () => {
                             des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
                         />
                         <ResumeCard
-                            title="Secondary School Education"
+                            title="Higher Secondary Education"
                             subTitle="kist College and SS"
                             result="3.54 GPA"
                             des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."

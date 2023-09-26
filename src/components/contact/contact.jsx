@@ -47,7 +47,7 @@ const Contact = () => {
 
 
     return (
-        <section id="contact" className="container mx-auto py-20 px-3 text-black">
+        <section id="contact" className="container mx-auto sm:py-20 py-10 px-3 text-black">
             <div className="text-center mt-8 px-8 sm:px-14">
                 <Title title="Contact Me" desc="get in touch" />
 
@@ -79,7 +79,7 @@ const Contact = () => {
                             Send Message
                         </button></div>
                     </form>
-                    <Map value="hidden" />
+                    {/* <Map value="hidden" /> */}
                 </div>
             </div>
         </section>

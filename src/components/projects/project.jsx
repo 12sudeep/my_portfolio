@@ -8,7 +8,7 @@ import img4 from '..//../assets/data.jpeg';
 
 const Project = () => {
     return (
-        <div className='container mx-auto min-h-screen flex flex-col text-center justify-center pt-20 px-8 py-20'>
+        <div className='container mx-auto min-h-screen flex flex-col text-center justify-center pt-20 px-8 sm:py-20 py-10'>
             <Title title='Projects' desc='some projects done by me' />
             <div className='grid grid-cols-1 md:grid-cols-2 gap-16 px-2 sm:px-10'>
                 <ProjectCard src={img1} name='Hospital management system' />

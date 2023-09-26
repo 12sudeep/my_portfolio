@@ -15,8 +15,8 @@ const Hero = () => {
     });
 
     return (
-        <section id="home" className="container mx-auto min-h-screen flex lg:flex-row py-20 flex-col sm:px-11 px-8 items-center">
-            <div className="flex-1">
+        <section id="home" className="container mx-auto min-h-screen flex lg:flex-row sm:py-20 py-10 flex-col sm:px-11 px-8 items-center">
+            <div className="flex-1 sm:pt-2 pt-8">
                 <Lottie
                     lottieRef={phoneRef}
                     loop={false}

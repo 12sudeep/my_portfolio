@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Popup from '../blog/popup';
-import blog1 from "../../assets/data.jpeg"
-import blog2 from "../../assets/attend.jpeg"
+
 
 
 
@@ -11,19 +10,6 @@ const Bot = () => {
     const [isPopupVisible, setPopupVisible] = useState(false);
     const [selectedBlog, setSelectedBlog] = useState(null);
 
-    // Sample blog data
-    const blogs = [
-        {
-            name: 'Blog 1',
-            image: {blog1},
-            url: '#',
-        },
-        {
-            name: 'Blog 2',
-            image: {blog2},
-            url: '#',
-        },
-    ];
 
     const openPopup = () => {
         setSelectedBlog(null);
@@ -53,7 +39,7 @@ const Bot = () => {
                 <ion-icon name="logo-octocat"></ion-icon>
             </button>
             {isPopupVisible && (
-                <Popup onClose={closePopup} blogs={blogs} onGoToClick={handleGoToClick} />
+                <Popup onClose={closePopup} onGoToClick={handleGoToClick} />
             )}
         </div>
     );

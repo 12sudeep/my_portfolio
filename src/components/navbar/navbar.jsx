@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import LOGO from "../../assets/Union.svg"
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
+
     const [open, setOpen] = useState(false);
 
     const menuLinks = [
         { name: "HOME", link: "#home" },
         { name: "ABOUT", link: "#about" },
-        { name: "SKILLS", link: "#skills" },
+        { name: "RESUME", link: "#resume" },
         { name: "PROJECTS", link: "#projects" },
         { name: "CONTACT", link: "#contact" },
     ];
@@ -20,7 +20,7 @@ const Navbar = () => {
         });
 
         return () => {
-            window.removeEventListener("scroll", () => {});
+            window.removeEventListener("scroll", () => { });
         };
     }, []);
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="flex h-[90px] justify-between items-center lg:px-36 px-8">
                 <div className="w-11 cursor-pointer ">
                     <Link to="#home">
-                    <img src={LOGO} alt="logo" />
+                        <img src={LOGO} alt="logo" />
                     </Link>
                 </div>
                 <div onClick={() => setOpen(!open)}
@@ -60,6 +60,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+
         </nav>
     );
 };

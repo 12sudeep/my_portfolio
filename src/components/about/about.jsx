@@ -1,8 +1,10 @@
 import CV from "../../assets/SudeepFullel_cv.pdf";
 import Don from "../../assets/image_1.png";
 import Title from "../layouts/title";
+import { useTheme } from '../layouts/themeContext';
 
 const About = () => {
+    const { theme } = useTheme();
     const info = [
         { text: "Degree", count: "DataScience" },
         { text: "Completed Projects", count: "5+" },
@@ -10,19 +12,19 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="sm:py-20 py-10 text-white">
-            <div className="text-center mt-8">
+        <section id="about" className="container mx-auto min-h-screen sm:py-20 py-10 ">
+            <div className="text-center sm:mt-8 mt-16">
                 <Title title="About Me" desc="My introduction" />
                 <div className="flex flex-col-reverse lg:flex-row items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
                     <div className="md:mt-0 mt-8">
-                        <div className="flex flex-col px-4 md:px-16 text-gray-300 sm:my-4 text-center md:text-left">
+                        <div className={`flex flex-col px-4 md:px-16 sm:my-4 text-center md:text-left text-${theme==="dark"?"gray-300":"black"}`}>
                             <p className="sm:text-xl text-sm">
                                 It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
                             </p>
                             <div className="flex mt-10 md:justify-start justify-center gap-7">
                                 {info.map((col) => (
                                     <div key={col.text}>
-                                        <h3 className="md:text-xl text-1xl font-semibold text-white">{col.count}</h3>
+                                        <h3 className="md:text-xl text-1xl font-semibold">{col.count}</h3>
                                         <span className="">{col.text}</span>
                                     </div>
                                 ))}

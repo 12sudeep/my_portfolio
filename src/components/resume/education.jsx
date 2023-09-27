@@ -1,8 +1,10 @@
 import React from 'react';
 import ResumeCard from './resumeCard';
 import { motion } from 'framer-motion';
+import { useTheme } from '../layouts/themeContext';
 
 const Education = () => {
+    const { theme } = useTheme();
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -13,7 +15,7 @@ const Education = () => {
                 <div>
                     <div className="py-12 font-titlefont text-center sm:text-left">
                         <p className="text-sm text-cyan-400 tracking-[4px]">2009-2023</p>
-                        <h2 className="text-2xl font-bold">Education Quality</h2>
+                        <h2 className={`text-2xl font-bold text-${theme==="dark"?"white" : "black"}`}>Education Quality</h2>
                     </div>
                     <div className="mt-6 lg:mt-14 w-full sm:border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-6 sm:gap-10">
                         <ResumeCard

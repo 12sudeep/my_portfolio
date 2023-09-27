@@ -1,9 +1,11 @@
 import React from 'react'
 import ResumeCard from './resumeCard'
 import { motion } from 'framer-motion'
+import { useTheme } from '../layouts/themeContext';
 
 
 const Experience = () => {
+    const { theme } = useTheme();
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -14,7 +16,7 @@ const Experience = () => {
                 <div className='flex-1'>
                     <div className="py-12 font-titlefont text-center sm:text-left">
                         <p className="text-sm text-cyan-400 tracking-[4px]">August,2023-present</p>
-                        <h2 className="text-2xl font-bold">Work Experience</h2>
+                        <h2 className={`text-2xl font-bold text-${theme==="dark"?"white" : "black"}`}>Work Experience</h2>
                     </div>
                     <div className="mt-6 lgl:mt-14 w-full sm:border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10 justify-center">
                         <ResumeCard

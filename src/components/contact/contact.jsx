@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Title from "../layouts/title";
 import Map from "./maps";
+import { useTheme } from '../layouts/themeContext';
 
 const Contact = () => {
+    const { theme } = useTheme();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -47,8 +49,8 @@ const Contact = () => {
 
 
     return (
-        <section id="contact" className="container mx-auto sm:py-20 py-10 px-3 text-black">
-            <div className="text-center mt-8 px-8 sm:px-14">
+        <section id="contact" className={`container mx-auto min-h-screen sm:py-20 py-10 px-3 text-${theme==="dark"?"black" : "white"}`}>
+            <div className="text-center sm:mt-8 mt-16 px-8 sm:px-14">
                 <Title title="Contact Me" desc="get in touch" />
 
                 <div className="mt-16 flex flex-col md:flex-row gap-6 max-w-5xl md:p-6 p-2 rounded-lg mx-auto justify-center text-center">
@@ -60,6 +62,7 @@ const Contact = () => {
                             placeholder="Your Name"
                             value={formData.name}
                             onChange={handleInputChange}
+                            className={`bg-${theme==="dark"?"white" : "black"}`}
                         />
                         <input
                             type="email"
@@ -67,6 +70,7 @@ const Contact = () => {
                             placeholder="Your Email Address"
                             value={formData.email}
                             onChange={handleInputChange}
+                            className={`bg-${theme==="dark"?"white" : "black"}`}
                         />
                         <textarea
                             name="message"
@@ -74,12 +78,12 @@ const Contact = () => {
                             rows={10}
                             value={formData.message}
                             onChange={handleInputChange}
+                            className={`bg-${theme==="dark"?"white" : "black"}`}
                         ></textarea>
                         <div className="flex justify-center text-center"><button className="btn-primary w-fit hover:bg-[cyan] hover:text-black" type="submit">
                             Send Message
                         </button></div>
                     </form>
-                    {/* <Map value="hidden" /> */}
                 </div>
             </div>
         </section>
